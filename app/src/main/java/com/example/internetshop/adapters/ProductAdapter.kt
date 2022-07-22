@@ -45,7 +45,7 @@ class ProductAdapter(var context: Context, var products: List<Product> = arrayLi
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        @SuppressLint("CheckResult")
+        @SuppressLint("CheckResult", "SetTextI18n")
         fun bindProduct(product: Product) {
 
 

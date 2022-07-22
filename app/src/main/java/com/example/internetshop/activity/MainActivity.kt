@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
             override fun onFailure(call: Call<List<Product>>, t: Throwable) {
 
                 print(t.message)
-                Log.d("Data error", t.message)
+                Log.d("Data error", t.message.toString())
                 Toast.makeText(this@MainActivity, t.message, Toast.LENGTH_SHORT).show()
 
             }

@@ -1,5 +1,6 @@
 package com.example.internetshop.adapters
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -29,6 +30,7 @@ class ShoppingCartAdapter(var context: Context, var cartItems: List<CartItem>) :
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
+        @SuppressLint("SetTextI18n")
         fun bindItem(cartItem: CartItem) {
 
 

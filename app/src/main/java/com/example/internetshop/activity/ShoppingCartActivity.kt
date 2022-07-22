@@ -1,5 +1,6 @@
 package com.example.internetshop.activity
 
+import android.annotation.SuppressLint
 import android.graphics.PorterDuff
 import android.os.Bundle
 import android.view.MenuItem
@@ -11,11 +12,13 @@ import com.example.internetshop.models.ShoppingCart
 import com.example.internetshop.adapters.ShoppingCartAdapter
 import kotlinx.android.synthetic.main.activity_shopping_cart.*
 
+@Suppress("DEPRECATION", "CanBeVal", "UNNECESSARY_SAFE_CALL")
 class ShoppingCartActivity : AppCompatActivity() {
 
     lateinit var adapter: ShoppingCartAdapter
 
 
+    @SuppressLint("SetTextI18n", "NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shopping_cart)
@@ -47,7 +50,7 @@ class ShoppingCartActivity : AppCompatActivity() {
     }
 
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when (item?.itemId) {
             android.R.id.home -> {
