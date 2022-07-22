@@ -1,3 +1,3 @@
-package com.example.internetshop
+package com.example.internetshop.models
 
 data class CartItem(var product: Product, var quantity: Int = 0)

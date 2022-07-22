@@ -1,4 +1,4 @@
-package com.example.internetshop
+package com.example.internetshop.activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -6,6 +6,12 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.internetshop.*
+import com.example.internetshop.adapters.ProductAdapter
+import com.example.internetshop.models.Product
+import com.example.internetshop.models.ShoppingCart
+import com.example.internetshop.service.APIConfig
+import com.example.internetshop.service.APIService
 import io.paperdb.Paper
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call

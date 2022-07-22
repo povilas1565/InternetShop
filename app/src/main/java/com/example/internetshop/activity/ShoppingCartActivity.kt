@@ -1,4 +1,4 @@
-package com.example.internetshop
+package com.example.internetshop.activity
 
 import android.graphics.PorterDuff
 import android.os.Bundle
@@ -6,6 +6,9 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.internetshop.R
+import com.example.internetshop.models.ShoppingCart
+import com.example.internetshop.adapters.ShoppingCartAdapter
 import kotlinx.android.synthetic.main.activity_shopping_cart.*
 
 class ShoppingCartActivity : AppCompatActivity() {

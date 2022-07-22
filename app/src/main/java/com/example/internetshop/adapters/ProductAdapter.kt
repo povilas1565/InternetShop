@@ -1,4 +1,4 @@
-package com.example.internetshop
+package com.example.internetshop.adapters
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -7,12 +7,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.internetshop.R
+import com.example.internetshop.activity.MainActivity
+import com.example.internetshop.models.CartItem
+import com.example.internetshop.models.Product
+import com.example.internetshop.models.ShoppingCart
 import com.google.android.material.snackbar.Snackbar
 import com.squareup.picasso.Picasso
 import io.reactivex.Observable
 import io.reactivex.ObservableOnSubscribe
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.cart_list_item.view.*
 import kotlinx.android.synthetic.main.cart_list_item.view.product_image
 import kotlinx.android.synthetic.main.cart_list_item.view.product_name
 import kotlinx.android.synthetic.main.cart_list_item.view.product_price
@@ -20,7 +24,7 @@ import kotlinx.android.synthetic.main.product_row_item.view.*
 
 class ProductAdapter(var context: Context, var products: List<Product> = arrayListOf()) :
     RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, p1: Int): ProductAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, p1: Int): ViewHolder {
 
         val view = LayoutInflater.from(context).inflate(R.layout.product_row_item, parent, false)
         return ViewHolder(view)
@@ -29,7 +33,7 @@ class ProductAdapter(var context: Context, var products: List<Product> = arrayLi
 
     override fun getItemCount(): Int = products.size
 
-    override fun onBindViewHolder(viewHolder: ProductAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
 
         viewHolder.bindProduct(products[position])
 

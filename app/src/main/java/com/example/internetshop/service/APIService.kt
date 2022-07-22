@@ -1,5 +1,6 @@
-package com.example.internetshop
+package com.example.internetshop.service
 
+import com.example.internetshop.models.Product
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Headers

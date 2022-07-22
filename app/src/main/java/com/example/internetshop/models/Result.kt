@@ -1,5 +1,6 @@
-package com.example.internetshop
+package com.example.internetshop.models
 
+import com.example.internetshop.models.Product
 import com.google.gson.annotations.SerializedName
 
 data class Result(

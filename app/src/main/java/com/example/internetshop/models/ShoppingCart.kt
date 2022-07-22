@@ -1,4 +1,4 @@
-package com.example.internetshop
+package com.example.internetshop.models
 
 import android.content.Context
 import android.widget.Toast
@@ -10,7 +10,7 @@ class ShoppingCart {
     companion object {
 
         fun addItem(cartItem: CartItem) {
-            val cart = ShoppingCart.getCart()
+            val cart = getCart()
 
             val targetItem = cart.singleOrNull { it.product.id == cartItem.product.id }
 
@@ -21,13 +21,13 @@ class ShoppingCart {
 
                 targetItem.quantity++
             }
-            ShoppingCart.saveCart(cart)
+            saveCart(cart)
 
         }
 
         fun removeItem(cartItem: CartItem, context: Context) {
 
-            val cart = ShoppingCart.getCart()
+            val cart = getCart()
 
 
             val targetItem = cart.singleOrNull { it.product.id == cartItem.product.id }
@@ -44,7 +44,7 @@ class ShoppingCart {
 
             }
 
-            ShoppingCart.saveCart(cart)
+            saveCart(cart)
 
         }
 
@@ -59,7 +59,7 @@ class ShoppingCart {
         fun getShoppingCartSize(): Int {
 
             var cartSize = 0
-            ShoppingCart.getCart().forEach {
+            getCart().forEach {
                 cartSize += it.quantity;
             }
 
